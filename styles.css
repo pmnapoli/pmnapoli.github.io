@@ -10,7 +10,7 @@
 
 :root {
   --paper: #e4e4df;
-  --paper-2: #c3d4e8;       /* soft Berkeley blue: the second fill, ink on top */
+  --paper-2: #adbdcd;       /* Berkeley Blue #003262 at about a third strength: the second fill, ink on top */
   --divider: #d6d6d0;       /* hairlines inside lists */
   --ink: #0d0d0d;
   --muted: #45453f;
