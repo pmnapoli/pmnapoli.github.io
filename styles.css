@@ -41,7 +41,7 @@ a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 1p
 cite { font-style: italic; }
 button { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
-::selection { background: var(--gold); color: var(--ink); }
+::selection { background: #003262; color: #fff; }   /* Berkeley Blue: visible on the gold, blue and paper fills */
 
 .mono { font-family: var(--text); font-size: var(--step-mono); font-weight: 500; line-height: 1.4; }   /* small notes, set plainly */
 .macro { font-family: var(--macro); font-weight: 700; font-size: var(--step-macro); line-height: 0.9; letter-spacing: -0.035em; text-transform: uppercase; }
