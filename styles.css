@@ -53,7 +53,7 @@ button { font: inherit; color: inherit; }
 .cell { background: var(--paper); padding: clamp(18px, 2vw, 28px); min-width: 0; }
 
 /* masthead */
-.masthead { display: grid; grid-template-columns: auto 1fr; gap: 16px 28px; align-items: center; margin: 0 calc(-1 * var(--edge)); padding: 14px var(--edge); background: var(--gold); color: var(--ink); border-bottom: 2px solid var(--ink); }
+.masthead { display: grid; grid-template-columns: auto 1fr; gap: 16px 28px; align-items: center; margin: 0 calc(-1 * var(--edge)); padding: 14px var(--edge); background: var(--paper-2); color: var(--ink); border-bottom: 2px solid var(--ink); }
 .masthead-nav { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: flex-end; }
 .masthead-nav a { text-decoration: none; padding: 4px 0; transition: color 140ms ease; }
 @media (hover: hover) and (pointer: fine) { .masthead-nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; } }
