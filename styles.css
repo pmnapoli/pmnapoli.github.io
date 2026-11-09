@@ -111,7 +111,6 @@ button { font: inherit; color: inherit; }
 .work-doi { color: var(--muted); text-decoration-color: var(--muted); overflow-wrap: anywhere; }
 .rows > li:nth-child(odd) { background: var(--paper-2); }
 .works li.is-active { background: var(--gold); }
-.work-note { max-width: 72ch; margin-top: 10px; }
 
 /* books: a row of four tabs, then the chosen book (cover beside its text) next to a photograph */
 .shelf { grid-template-columns: repeat(4, minmax(0, 1fr)); }
