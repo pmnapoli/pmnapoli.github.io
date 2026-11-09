@@ -11,7 +11,8 @@
 :root {
   --paper: #e4e4df;
   --paper-2: #7aa7bf;       /* Berkeley's Founders Rock blue #3B7EA1, lightened a third: the second fill, ink on top */
-  --divider: #d6d6d0;       /* hairlines inside lists */
+  --divider: #d6d6d0;
+  --navy: #003262;          /* Berkeley Blue: the top bar */       /* hairlines inside lists */
   --ink: #0d0d0d;
   --muted: #33332e;
   --gold: #fdb515;         /* Berkeley California Gold: whole fields, always with ink on top */
@@ -53,7 +54,7 @@ button { font: inherit; color: inherit; }
 .cell { background: var(--paper); padding: clamp(18px, 2vw, 28px); min-width: 0; }
 
 /* masthead */
-.masthead { display: grid; grid-template-columns: auto 1fr; gap: 16px 28px; align-items: center; margin: 0 calc(-1 * var(--edge)); padding: 14px var(--edge); background: var(--ink); color: var(--paper); border-bottom: 2px solid var(--ink); }
+.masthead { display: grid; grid-template-columns: auto 1fr; gap: 16px 28px; align-items: center; margin: 0 calc(-1 * var(--edge)); padding: 14px var(--edge); background: var(--navy); color: var(--paper); border-bottom: 2px solid var(--ink); }
 .masthead :focus-visible { outline-color: var(--gold); }
 .masthead-nav { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: flex-end; }
 .masthead-nav a { text-decoration: none; padding: 4px 0; transition: color 140ms ease; }
