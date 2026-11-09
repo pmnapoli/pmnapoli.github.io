@@ -2,7 +2,7 @@
    Grey documentation paper, carbon ink, one accent: Berkeley's California Gold (#FDB515). The gold is
    a field colour only (the name block, two news items, the edited volumes, the chosen book's
    title on black, the row or tab under the pointer). Other boxes alternate between
-   the paper and a second grey (--paper-2) with ink on it; never text on the paper, never an underline. One family,
+   the paper and a soft Berkeley blue (--paper-2) with ink on it; never text on the paper, never an underline. One family,
    Schibsted Grotesk (drawn for a newspaper group): bold for structure, regular for reading. No
    monospace, no bracket or arrow devices; notes are plain sentences. Zones are drawn by 2px grid lines (gap over an ink ground); corners are
    square. Pictures are present-day colour photographs, lightly corrected; no dithering, grain or other print effects.
@@ -10,7 +10,8 @@
 
 :root {
   --paper: #e4e4df;
-  --paper-2: #d6d6d0;
+  --paper-2: #c3d4e8;       /* soft Berkeley blue: the second fill, ink on top */
+  --divider: #d6d6d0;       /* hairlines inside lists */
   --ink: #0d0d0d;
   --muted: #45453f;
   --gold: #fdb515;         /* Berkeley California Gold: whole fields, always with ink on top */
@@ -180,7 +181,7 @@ button { font: inherit; color: inherit; }
 .bars details[open] summary::after { content: "–"; }
 .bars details[open] summary { border-bottom: var(--rule) solid var(--ink); }
 .items { padding: 6px 18px 18px; }
-.items li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 9px 0; border-bottom: 1px solid var(--paper-2); }
+.items li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 9px 0; border-bottom: 1px solid var(--divider); }
 .items .year { flex: none; font-size: var(--step-mono); font-weight: 700; font-variant-numeric: tabular-nums; }
 .bars-note { padding: 14px 18px; border-top: var(--rule) solid var(--ink); font-family: var(--text); font-size: var(--step-mono); font-weight: 500; }
 
