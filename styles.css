@@ -62,6 +62,10 @@ button { font: inherit; color: inherit; }
 .hero-name { grid-column: 1 / span 8; display: flex; align-items: flex-end; min-height: 40svh; padding-bottom: clamp(18px, 2vw, 32px); background: var(--gold); }
 .hero-photo { grid-column: 9 / -1; grid-row: 1 / span 2; display: flex; flex-direction: column; padding: 0; }
 .hero-photo img { flex: 1; min-height: 0; width: 100%; object-fit: cover; }
+@media (min-width: 720px) {
+  .hero-photo { position: relative; }
+  .hero-photo img { position: absolute; inset: 0; height: 100%; object-position: 50% 30%; }
+}
 .hero-data { grid-column: 1 / span 8; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--rule); background: var(--ink); padding: 0; }
 .hero-data > div { background: var(--paper); padding: 16px clamp(14px, 1.6vw, 22px) 20px; }
 .hero-data dt { font-size: var(--step-mono); font-weight: 700; }
@@ -69,17 +73,18 @@ button { font: inherit; color: inherit; }
 .hero-data > div:first-child { background: var(--paper-2); }
 
 /* each unit: a heavy rule, an index, a structural title */
-.unit { margin-top: clamp(64px, 7vw, 112px); }
+.unit { margin-top: clamp(56px, 5.5vw, 88px); scroll-margin-top: 24px; }
 .unit-head { padding-top: 12px; border-top: var(--rule) solid var(--ink); margin-bottom: clamp(20px, 2.4vw, 32px); }
 .unit-title { font-family: var(--macro); font-weight: 700; font-size: clamp(1.6rem, 1.1rem + 1.4vw, 2.4rem); line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
 
 /* about: biography beside education */
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.profile-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .profile-grid .cell { font-size: var(--step-body); }
 .profile-grid .cell:first-child { background: var(--paper-2); }
 .profile-label { margin-bottom: 14px; font-family: var(--text); font-size: var(--step-mono); font-weight: 700; line-height: 1.3; }
-.bio { max-width: 72ch; }
+.bio { max-width: 76ch; }
+.profile-label-next { margin-top: 28px; }
 .bio p + p { margin-top: 1em; }
 .degrees { list-style: square; padding-left: 1.2em; }
 .degrees li + li { margin-top: 6px; }
@@ -201,8 +206,7 @@ button { font: inherit; color: inherit; }
 @media (max-width: 1023px) {
   .hero-name { grid-column: 1 / -1; min-height: auto; }
   .hero-photo { grid-column: 1 / span 6; grid-row: auto; }
-  .hero-photo img { aspect-ratio: 4 / 5; }
-  .hero-data { grid-column: 7 / -1; grid-template-columns: minmax(0, 1fr); grid-auto-rows: 1fr; }
+  .hero-data { grid-column: 7 / -1; grid-template-columns: minmax(0, 1fr); }
   .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .writing-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "essays talks" "essays photo"; }
@@ -231,6 +235,7 @@ button { font: inherit; color: inherit; }
 
 /* motion: content stays visible without script or with reduced motion */
 @media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }   /* menu links slide to their section */
   .js [data-rise] { opacity: 0; transform: translateY(16px); animation: rise 700ms var(--ease) forwards; animation-delay: calc(var(--i, 0) * 80ms + 120ms); }
   .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 600ms var(--ease), transform 700ms var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
   .js [data-reveal].is-in { opacity: 1; transform: none; }
