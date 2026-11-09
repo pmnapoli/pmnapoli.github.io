@@ -10,10 +10,10 @@
 
 :root {
   --paper: #e4e4df;
-  --paper-2: #adbdcd;       /* Berkeley Blue #003262 at about a third strength: the second fill, ink on top */
+  --paper-2: #7aa7bf;       /* Berkeley's Founders Rock blue #3B7EA1, lightened a third: the second fill, ink on top */
   --divider: #d6d6d0;       /* hairlines inside lists */
   --ink: #0d0d0d;
-  --muted: #45453f;
+  --muted: #33332e;
   --gold: #fdb515;         /* Berkeley California Gold: whole fields, always with ink on top */
 
   --macro: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
